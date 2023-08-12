@@ -34,16 +34,17 @@ public class Main2 {
 		Stack<Character> s = new Stack<>();
 
 		for (char x : t.toCharArray()) {
-			if (x == ')') {
-				while (true)
-					if (s.pop() == '(')
-						break;
-			} else
+			if (x == ')')
+				while (s.pop() != '(')
+					;
+			else
 				s.push(x);
 		}
 
 		for (char x : s)
 			str.append(x);
+		//for (int i = 0; i < s.size(); i++)
+		//	str.append(s.get(i));
 		return str.toString();
 	}
 

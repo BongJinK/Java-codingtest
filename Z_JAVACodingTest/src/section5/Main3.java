@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 
 public class Main3 {
+	// 3. 크레인 인형뽑기(카카오)
 	// 0 0 0 0 0 | 0
 	// 0 0 1 0 3 | 0
 	// 0 2 5 0 1 | 0
@@ -69,11 +70,11 @@ public class Main3 {
 		Stack<Integer> stack = new Stack<>();
 
 		for (int i = 0; i < m; i++) {
-			int choice = moves[i] - 1;
+			int pos = moves[i] - 1;
 			for (int j = 0; j < n; j++) {
-				if (board[j][choice] != 0) {
-					stack.push(board[j][choice]);
-					board[j][choice] = 0;
+				if (board[j][pos] != 0) {
+					stack.push(board[j][pos]);
+					board[j][pos] = 0;
 					break;
 				}
 			}
@@ -113,16 +114,16 @@ public class Main3 {
 		Stack<Integer> stack = new Stack<>();
 
 		for (int i = 0; i < m; i++) {
-			int choice = moves[i] - 1;
+			int pos = moves[i] - 1;
 			for (int j = 0; j < n; j++) {
-				if (board[j][choice] != 0) {
-					if (!stack.isEmpty() && stack.peek() == board[j][choice]) {
+				if (board[j][pos] != 0) {
+					if (!stack.isEmpty() && stack.peek() == board[j][pos]) {
 						stack.pop();
 						ans += 2;
 					} else {
-						stack.push(board[j][choice]);
+						stack.push(board[j][pos]);
 					}
-					board[j][choice] = 0;
+					board[j][pos] = 0;
 					break;
 				}
 			}
