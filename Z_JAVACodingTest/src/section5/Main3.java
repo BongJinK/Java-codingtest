@@ -66,21 +66,21 @@ public class Main3 {
 
 	public static int sol(int n, int[][] board, int m, int[] moves) {
 		int ans = 0;
-		Stack<Integer> s = new Stack<>();
+		Stack<Integer> stack = new Stack<>();
 
 		for (int i = 0; i < m; i++) {
 			int choice = moves[i] - 1;
 			for (int j = 0; j < n; j++) {
 				if (board[j][choice] != 0) {
-					s.push(board[j][choice]);
+					stack.push(board[j][choice]);
 					board[j][choice] = 0;
 					break;
 				}
 			}
 
-			if (s.size() >= 2 && s.elementAt(s.size() - 2) == s.peek()) {
-				s.pop();
-				s.pop();
+			if (stack.size() >= 2 && stack.elementAt(stack.size() - 2) == stack.peek()) {
+				stack.pop();
+				stack.pop();
 				ans += 2;
 			}
 		}
