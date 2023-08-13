@@ -25,16 +25,20 @@ public class Main7 {
 	// 두 번 째 줄부터 현수가 짠 수업설계가 주어집니다.(수업설계의 길이는 30이하이다)
 	// 첫 줄에 수업설계가 잘된 것이면 “YES", 잘못된 것이면 ”NO“를 출력합니다.
 
-	public static String sol(String n, String lm) {
+	// CBA
+	// CBDAGE
+	// YES
+
+	public static String sol(String n, String sc) {
 		Queue<Character> lms = new LinkedList<>();
 		Queue<Character> check = new LinkedList<>();
 
-		for (Character x : lm.toCharArray())
+		for (Character x : sc.toCharArray())
 			lms.offer(x);
 		for (Character x : n.toCharArray())
 			check.offer(x);
 
-		for (int i = 0; i < lm.length(); i++) {
+		for (int i = 0; i < sc.length(); i++) {
 			if (check.isEmpty())
 				return "YES";
 			if (lms.poll() == check.peek())
@@ -49,9 +53,25 @@ public class Main7 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		String n = br.readLine();
-		String lm = br.readLine();
+		String sc = br.readLine();
 
-		System.out.println(sol(n, lm));
+		System.out.println(sol(n, sc));
 		br.close();
+	}
+
+	public static String sol1(String n, String sc) {
+		Queue<Character> q = new LinkedList<>();
+		for (int i = 0; i < n.length(); i++)
+			q.offer(n.charAt(i));
+
+		for (int i = 0; i < sc.length(); i++) {
+			if (q.isEmpty())
+				return "YES";
+			if (sc.charAt(i) == q.peek())
+				q.poll();
+		}
+		if (q.isEmpty())
+			return "YES";
+		return "NO";
 	}
 }
