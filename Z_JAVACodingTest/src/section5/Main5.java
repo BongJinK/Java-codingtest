@@ -3,8 +3,6 @@ package section5;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
 
 public class Main5 {
@@ -50,8 +48,6 @@ public class Main5 {
 	public static int sol(String t) {
 		int ans = 0;
 		int point = 0;
-		Map<Character, Character> map = new HashMap<>();
-		map.put('(', ')');
 		Stack<Character> stack = new Stack<>();
 
 		for (char x : t.toCharArray()) {
@@ -68,7 +64,6 @@ public class Main5 {
 			}
 			stack.push(x);
 		}
-
 		return ans;
 	}
 
@@ -76,8 +71,26 @@ public class Main5 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String t = br.readLine();
 
-		System.out.println(sol(t));
+		System.out.println(sol1(t));
 		br.close();
+	}
+
+	public static int sol1(String t) {
+		int answer = 0;
+		Stack<Character> stack = new Stack<>();
+
+		for (int i = 0; i < t.length(); i++) {
+			if (t.charAt(i) == '(')
+				stack.push('(');
+			else if (t.charAt(i) == ')') {
+				stack.pop();
+				if (t.charAt(i - 1) == ')')
+					answer++;
+				else
+					answer += stack.size();
+			}
+		}
+		return answer;
 	}
 
 }

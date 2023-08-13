@@ -25,31 +25,17 @@ public class Main4 {
 			else {
 				int n2 = stack.pop();
 				int n1 = stack.pop();
-				int result = operation(n1, n2, x);
-				stack.push(result);
+				if (x == '+')
+					stack.push(n1 + n2);
+				else if (x == '-')
+					stack.push(n1 - n2);
+				else if (x == '*')
+					stack.push(n1 * n2);
+				else if (x == '/')
+					stack.push(n1 / n2);
 			}
 		}
 		ans = stack.pop();
-		return ans;
-	}
-
-	private static int operation(int n1, int n2, char x) {
-		int ans = 0;
-		switch (x) {
-		case '+':
-			ans = n1 + n2;
-			break;
-		case '-':
-			ans = n1 - n2;
-			break;
-		case '*':
-			ans = n1 * n2;
-			break;
-		case '/':
-			ans = n1 / n2;
-			break;
-		}
-
 		return ans;
 	}
 
