@@ -20,9 +20,9 @@ public class Main1 {
 
 	public static String sol(int n, int[] arr) {
 		StringBuilder str = new StringBuilder("");
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n - 1; i++) {
 			int idx = i;
-			for (int j = i; j < n; j++) {
+			for (int j = i + 1; j < n; j++) {
 				if (arr[idx] > arr[j])
 					idx = j;
 			}
