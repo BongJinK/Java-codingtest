@@ -24,7 +24,15 @@ class Point7 implements Comparable<Point7> {
 			return this.x - o.x;
 	}
 	// this Object : 순서대로 정렬되어 있다 생각
-	// 오름차순 : this - o; [object에 -붙여 작은 것부터 정렬하겠다라는 의미]  
+	// 오름차순 : this - o; [object에 -붙여 작은 것부터 정렬하겠다라는 의미]
+
+//	@Override
+//	public int compareTo(Point7 o) {
+//		if (this.x == o.x)
+//			return o.y - this.y;
+//		else
+//			return o.x - this.x;
+//	}
 	// 내림차순 : o - this; [object에 +붙여 큰 것부터 정렬하겠다라는 의미]
 }
 
@@ -58,10 +66,10 @@ public class Main7_0 {
 			String[] temp = br.readLine().split(" ");
 			list.add(new Point7(Integer.parseInt(temp[0]), Integer.parseInt(temp[1])));
 		}
-		
+
 		// Collections.sort : Point7 class의 compareTo() 메서드 동작
 		Collections.sort(list);
-		for(Point7 p : list)
+		for (Point7 p : list)
 			System.out.println(p.x + " " + p.y);
 		br.close();
 	}
