@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main2 {
+public class Main02 {
 	// 2. 버블 정렬 [ 우측 정렬 : Max값부터 ]
 	// 서로 인접한 두 원소를 검사하여 정렬하는 알고리즘
 	// 인접한 2개의 레코드를 비교하여 크기가 순서대로 되어 있지 않으면 서로 교환한다.
