@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Main5 {
+public class Main05 {
 	// 5. 중복 확인
 	// 현수네 반에는 N명의 학생들이 있습니다.
 	// 선생님은 반 학생들에게 1부터 10,000,000까지의 자연수 중에서
