@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Main8 {
 	// 8. 이분검색
@@ -18,7 +19,9 @@ public class Main8 {
 	// 8 32
 	// 23 87 65 12 57 32 99 81
 
-	// Collections.reverse(Arrays.asList(arr)); 오름차순 정렬 뒤집기
+	// Arrays.sort(arr, Collections.reverseOrder()); 오름차순 정렬 뒤집기
+	// 단 이때의 arr은 원시자료형 int가 아닌 래퍼 클래스인 Integer 사용해야함
+	// Integer >> Comparable 인터페이스 구현해서 사용
 
 	public static int sol(int n, int m, int[] arr) {
 		Arrays.sort(arr);
@@ -26,16 +29,16 @@ public class Main8 {
 		int lt = 0;
 		int rt = n - 1;
 
-		while (lt < rt) {
-			int idx = (lt + rt) / 2;
+		while (lt <= rt) {
+			int search = (lt + rt) / 2;
 
-			if (arr[idx] == m) {
-				answer = idx + 1;
+			if (arr[search] == m) {
+				answer = search + 1;
 				break;
-			}else if (arr[idx] > m)
-				rt = idx;
+			} else if (arr[search] > m)
+				rt = search - 1;
 			else
-				lt = idx;
+				lt = search + 1;
 		}
 		return answer;
 	}
