@@ -20,7 +20,7 @@ public class Main03 {
 	// 6
 	// 13 5 11 7 23 15
 
-	public static String sol(int n, int[] arr) {
+	public static String sol(int n, int[] arr) { 
 		StringBuilder str = new StringBuilder("");
 
 		for (int i = 1; i < n; i++) {
