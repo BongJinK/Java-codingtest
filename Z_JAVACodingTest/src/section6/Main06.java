@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main6 {
+public class Main06 {
 	// 6. 장난꾸러기
 	// 철수네 반에는 N명의 학생들이 있습니다.
 	// 반 번호를 정해 주기 위해 반 학생들을 키가 가장 작은 학생부터 일렬로 키순으로 세웠습니다.
