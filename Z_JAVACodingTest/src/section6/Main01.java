@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main1 {
+public class Main01 {
 	// 1. 선택 정렬 [ 좌측 정렬 : Min값부터 ]
 	// 최솟값 찾아 index 0 부터 n까지 차례대로 정렬
 
