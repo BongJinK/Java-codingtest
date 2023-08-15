@@ -3,9 +3,8 @@ package section6;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.List;
 
-public class Main3 {
+public class Main03 {
 	// 3. 삽입 정렬 [ 우측 정렬 : Max값부터 ]
 	// 손안의 카드를 정렬하는 방법과 유사하다.
 	// 새로운 카드를 기존의 정렬된 카드 사이의 올바른 자리를 찾아 삽입한다.
