@@ -17,7 +17,7 @@ public class Main02 {
 	// 오름차순으로 정렬된 수열을 출력합니다.
 
 	// 6
-	// 13 5 11 7 23 15
+	// 13 5 11 7 23 15 
 
 	public static String sol(int n, int[] arr) {
 		StringBuilder str = new StringBuilder("");
