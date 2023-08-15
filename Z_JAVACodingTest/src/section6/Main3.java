@@ -3,8 +3,6 @@ package section6;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main3 {
@@ -30,11 +28,12 @@ public class Main3 {
 			// 삽입대상 : target
 			int target = arr[i];
 			// i-1까지는 정렬 된 것으로 간주하므로 i-1부터 역순 탐색
-			int j = i - 1;
-
-			while (j >= 0 && arr[j] > target) {
-				arr[j + 1] = arr[j];
-				j--;
+			int j;
+			for (j = i - 1; j >= 0; j--) {
+				if (arr[j] > target)
+					arr[j + 1] = arr[j];
+				else
+					break;
 			}
 			arr[j + 1] = target;
 		}
@@ -48,40 +47,14 @@ public class Main3 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		int n = Integer.parseInt(br.readLine());
-		// 1. 배열
 		int[] arr = new int[n];
-		// 2. 리스트
-		// List<Integer> list = new ArrayList<>();
 
 		String[] t = br.readLine().split(" ");
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++)
 			arr[i] = Integer.parseInt(t[i]);
-			// list.add(Integer.parseInt(t[i]));
-		}
 
 		System.out.println(sol(n, arr));
-		// System.out.println(sol1(n, list));
 		br.close();
 	}
-
-	public static String sol1(int n, List<Integer> list) {
-		StringBuilder str = new StringBuilder("");
-
-		for (int i = 1; i < n; i++) {
-			int target = list.get(i);
-			int j = i - 1;
-
-			while (j >= 0 && list.get(j) > target) {
-				list.add(j + 1, list.remove(j));
-				j--;
-			}
-			list.set(j + 1, target);
-		}
-
-		for (int x : list)
-			str.append(x + " ");
-		return str.toString();
-	}
-
 }
