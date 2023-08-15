@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main4 {
+public class Main04 {
 	// ★★★★★
 	// 4. Least Recently Used
 	// 캐시메모리는 CPU와 주기억장치(DRAM) 사이의 고속의 임시 메모리로서
