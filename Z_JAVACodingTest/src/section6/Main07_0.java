@@ -36,7 +36,7 @@ class Point7 implements Comparable<Point7> {
 	// 내림차순 : o - this; [object에 +붙여 큰 것부터 정렬하겠다라는 의미]
 }
 
-public class Main7_0 {
+public class Main07_0 {
 	// 7. 좌표 정렬
 	// N개의 평면상의 좌표(x, y)가 주어지면 모든 좌표를 오름차순으로 정렬하는 프로그램을 작성하세요.
 	// 정렬기준은 먼저 x값의 의해서 정렬하고, x값이 같을 경우 y값에 의해 정렬합니다.
