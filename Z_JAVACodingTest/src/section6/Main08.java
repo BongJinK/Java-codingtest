@@ -4,9 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Collections;
 
-public class Main8 {
+public class Main08 {
 	// 8. 이분검색
 	// 임의의 N개의 숫자가 입력으로 주어집니다.
 	// N개의 수를 오름차순으로 정렬한 다음 N개의 수 중 한 개의 수인 M이 주어지면
