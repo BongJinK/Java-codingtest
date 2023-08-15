@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main9 {
+public class Main09 {
 	// ★★★★★★★★★★★★★★★★★
 	// 9. 뮤직비디오(결정알고리즘)
 	// DVD에는 총 N개의 곡이 들어가는데, DVD에 녹화할 때에는 라이브에서의 순서가 그대로 유지되어야 한다.
