@@ -29,5 +29,4 @@ public class Main02 {
 		DFS(n);
 		br.close();
 	}
-
 }
