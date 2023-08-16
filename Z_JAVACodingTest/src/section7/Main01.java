@@ -40,5 +40,4 @@ public class Main01 {
 		DFS(n);
 		br.close();
 	}
-
 }
