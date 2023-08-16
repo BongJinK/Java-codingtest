@@ -36,12 +36,10 @@ public class Main10 {
 		while (lt <= rt) {
 			int size = (lt + rt) / 2;
 
-			if (checkSize(arr, size) == c) {
+			if (checkSize(arr, size) >= c) {
 				answer = size;
 				lt = size + 1;
-			} else if (checkSize(arr, size) > 3)
-				lt = size + 1;
-			else
+			} else
 				rt = size - 1;
 		}
 		return answer;
