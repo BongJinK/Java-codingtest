@@ -40,7 +40,7 @@ public class Main10 {
 				answer = size;
 				lt = size + 1;
 			} else
-				rt = size - 1; 
+				rt = size - 1;
 		}
 		return answer;
 	}
