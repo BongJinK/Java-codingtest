@@ -24,7 +24,6 @@ public class Main08_0 {
 	// ¿¹2
 	// 8 3
 	// 5
-
 	public static void BFS(int s, int e) {
 		int cnt = 0;
 
