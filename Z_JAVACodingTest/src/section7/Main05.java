@@ -1,8 +1,5 @@
 package section7;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 class Node {
 	int data; // Node number;
 	Node lt, rt; // 왼쪽, 오른쪽 자식의 Node정보
@@ -45,7 +42,6 @@ public class Main05 {
 	public static void main(String[] args) {
 		// tree라는 이름의 Main class 객체
 		Main05 tree = new Main05();
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		tree.root = new Node(1);
 		tree.root.lt = new Node(2);
@@ -55,5 +51,6 @@ public class Main05 {
 		tree.root.rt.lt = new Node(6);
 		tree.root.rt.rt = new Node(7);
 		tree.DFS(tree.root);
+
 	}
 }
