@@ -26,11 +26,14 @@ public class Main06_1 {
 
 	public static void DFS(int level) {
 		if (n == level) {
+			StringBuilder str = new StringBuilder("");
+
 			for (int i = 0; i < n; i++) {
 				if (check[i] != 0)
-					System.out.print(i + 1 + " ");
+					str.append(i + 1 + " ");
 			}
-			System.out.println();
+			if (!str.toString().equals(""))
+				System.out.println(str.toString());
 			return;
 		}
 
