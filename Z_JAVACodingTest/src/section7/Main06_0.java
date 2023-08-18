@@ -28,20 +28,14 @@ public class Main06_0 {
 
 	public static void test(int n, int i, int[] t) {
 		if (n == i) {
-			// 공집합 제거
-			int check = 0;
-			for (int s = 0; s < n; s++) {
-				if (t[s] == 0)
-					check++;
-			}
-			if (check == n)
-				return;
+			StringBuilder str = new StringBuilder("");
 
 			for (int s = 0; s < n; s++) {
 				if (t[s] != 0)
-					System.out.print(t[s] + " ");
+					str.append(t[s] + " ");
 			}
-			System.out.println();
+			if (!str.toString().equals(""))
+				System.out.println(str.toString());
 			return;
 		}
 
