@@ -32,7 +32,7 @@ public class Main06_1 {
 				if (check[i] != 0)
 					str.append(i + 1 + " ");
 			}
-			if (!str.toString().equals(""))
+			if (str.length() != 0)
 				System.out.println(str.toString());
 			return;
 		}
